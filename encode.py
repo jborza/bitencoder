@@ -29,8 +29,7 @@ bit_to_color = {'000':'black',
 '111':'white'}
 
 def char_to_bits(ch):
-    #bin() returns 0b000000 - remove the 0b prefix
-    #return bin(ch)[2:]
+    #format string: leading zero; 8 digits, binary
     return format(ch, "08b")
 
 def bitstream(string):
@@ -60,10 +59,6 @@ for group in groups:
     print('%s -> %s @ %d,%d' % (group, color , row, column))
     pixel_index = pixel_index + 1
     draw.rectangle([row * 32, column * 32, (row+1)*32,(column+1)*32],fill=color)
-
-# put text on image
-#button_draw = ImageDraw.Draw(img)
-#button_draw.text((20, 20), "very loooooooooooooooooong text", font=ImageFont.truetype("arial"), fill='black')
-
+    
 # save in new file
 img.save("output.png", "PNG")
