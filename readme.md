@@ -2,6 +2,6 @@
 
 Encodes binary data into a color code picture (QR-like)
 
-The following Python modules need to be installed:
-- Pillow `pip install pillow`
+The Python dependencies need to be installed first:
+- Pillow `pip install -r requirements.txt`
 
